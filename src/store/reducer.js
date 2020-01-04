@@ -9,19 +9,20 @@ const reducer = (state = initialState, action) => {
         case "INCREMENT":
             const newState = Object.assign({}, state);
             newState.counter = state.counter + 1;
-            return {
-                counter: state.counter + 1
-            }
+            return newState;
         case "DECREMENT":
             return {
+                ...state,
                 counter: state.counter - 1
             }
         case "ADD":
             return {
+                ...state,
                 counter: state.counter + action.value
             }
         case "SUBSTRACT":
             return {
+                ...state,
                 counter: state.counter - action.value
             }
         case "STORE_RESULT":
