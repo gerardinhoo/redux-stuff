@@ -41,9 +41,9 @@ export const storeResult = (res) => {
     }
 }
 
-export const deleteResult = (resElid) => {
+export const deleteResult = (resElId) => {
     return {
         type: DELETE_RESULT,
-        id: resElid
+        resultElid: resElId
     }
 }
